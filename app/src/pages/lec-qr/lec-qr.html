@@ -1,0 +1,37 @@
+<ion-header> <!--indicated header of this page-->
+  <div class="hr"></div> <!--custom div with hr id to create a line-->
+  <ion-navbar>
+    <ion-title>
+      <ion-icon name="person-add"></ion-icon> Lecturer
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="home"> <!--strat of page content-->
+    <div class="hr"></div> <!--custom div with hr id to create a line-->
+  <ion-item id="dropdown" padding> <!--creates item on webpage-->
+    <ion-label id="drpData">Subject</ion-label> <!--label for the above mentioned item-->
+    <ion-select id="drpData" [(ngModel)]="subjectPicked"> <!--creates select tag for app, dropdown-->
+      <ion-option color="dark" *ngFor="let s of subjects" value="{{ s.ModuleCode }}">{{ s.ModuleCode }}</ion-option>
+       <!--options in dropdown dinamicaly populated by ngFor form typescript side via the subjects array-->
+    </ion-select>
+  </ion-item>
+  <div class="hr"></div> <!--custom div with hr id to create a line-->
+  <ion-item id="dropdown" padding>
+      <ion-label id="drpData">Time</ion-label>
+      <ion-select id="drpData" [(ngModel)]="timePicked"> <!--new select or dropdown on app-->
+        <ion-option color="dark" value="Class Start">Class Start</ion-option>
+        <ion-option color="dark" value="Class End">Class End</ion-option>
+        <!--values for dropdown, here hard coded as only these values are needed-->
+      </ion-select>
+    </ion-item>
+  <button id="btnQR" ion-button full icon-left (click)="createCode()"> <!--Button to call the createCode() method-->
+    <ion-icon name="barcode"></ion-icon> Create Code <!--icon used on button-->
+  </button>
+  <ion-card text-center *ngIf="createdCode"> <!--card used to store info-->
+    <ngx-qrcode id="qr" [qrc-value]="createdCode" name="qr"></ngx-qrcode> <!--QR code output in the form of an img-->
+    <ion-card text-center>
+      <h4><b>Subject: {{ subjectPicked }}, {{ timePicked }}</b></h4> <!--indicates the value of the generated QR code-->
+    </ion-card>
+  </ion-card>
+</ion-content>

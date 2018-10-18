@@ -1,0 +1,49 @@
+page-home {
+    #home {
+        background-image: url(../assets/imgs/background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #card {
+        background-color: black;
+        color: white;
+        opacity: 0.7;
+    }
+    #header {
+        color: white;
+    }
+    .toolbar-background {
+        background-color: black;
+        opacity: 0.9;
+    }
+    .toolbar-title {
+        color: white;
+    }
+    #icon-menu {
+        color: white;
+    }
+    .hr {
+        border: 0.5px solid white !important;
+        width: 100% !important;
+        background: white !important;
+        display: block !important;
+        font-size: 1px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    #home-icon {
+        font-size: 40px;
+    }
+    .no-scroll .scroll-content{
+        overflow: hidden;
+   }
+   #btnExit {
+        background-color: transparent;
+        opacity: 0.7;
+        color: white;
+        margin-left: 60%;
+    }
+    #exit-icon {
+        font-size: 25px;
+    }
+}

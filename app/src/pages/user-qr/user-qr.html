@@ -1,0 +1,24 @@
+<ion-header> <!--header for this page-->
+  <div class="hr"></div> <!--custom div with id hr to create a line-->
+  <ion-navbar> <!--nav bar to navigate to and from this page-->
+    <ion-title>
+      <ion-icon name="person"></ion-icon> Demi
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="home"> <!--content of this page-->
+  <button id="btnQR" ion-button full icon-left (click)="scanCode()"> <!--button to call scanCode() method on typescript side-->
+    <ion-icon name="qr-scanner"></ion-icon> Scan Code <!--icon for button-->
+  </button>
+  <ion-card id="card" *ngIf="scannedCode"> <!--ion-card with ngIf to test for value in scannedCode-->
+    <ion-card-content>
+      Subject: {{ subjectOutput }} <!--card content, will be QR scan result with some filtering-->
+    </ion-card-content>
+  </ion-card>
+  <br>
+  <button id="btnQR2" class="it" ion-button full icon-left (click)="postScan()" disabled> <!--button to post the scanned value from the QR code-->
+    <!--calls the postScan() method from the typescipt side-->
+    <ion-icon name="cloud-upload"></ion-icon> Save Data
+  </button>
+</ion-content>

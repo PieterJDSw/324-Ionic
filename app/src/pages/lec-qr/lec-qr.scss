@@ -1,0 +1,28 @@
+page-lec-qr {
+    #home {
+        background-image: url(../assets/imgs/background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #dropdown {
+        background-color: black;
+        opacity: 0.7;
+    }
+    .hr {
+        border: 0.5px solid white !important;
+        width: 100% !important;
+        background: white !important;
+        display: block !important;
+        font-size: 1px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    #drpData {
+        height: auto;
+        opacity: 1;
+        color: white;
+    }
+    #btnQR {
+        margin-top: 20px;
+    }
+}

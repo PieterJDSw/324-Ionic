@@ -1,0 +1,48 @@
+<ion-header> <!--indicated the header of the app-->
+  <ion-navbar>  <!--navbar for the app with all buttons-->
+    <button ion-button menuToggle>
+      <ion-icon name="menu" id="icon-menu"></ion-icon>
+    </button>
+    <ion-title id="title">
+      <ion-icon name="home"></ion-icon> Home
+      <button id="btnExit" (click)="exitApp()">
+        <ion-icon id="exit-icon" name="close-circle"></ion-icon>
+      </button>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="home"> <!--content of the hopme page indicated with the ion-conted tag-->
+  <ion-card id="card" text-center> <!--ion-card tag, used to house information-->
+    <ion-card-header id="header"> <!--indicates header of the card-->
+      Demi Logger
+    </ion-card-header>
+    <div class="hr"></div>
+    <ion-card-content>
+      Welcome to the Demi Logger smartphone application.
+      A simple solution for work-hour-recording of demi's.
+    </ion-card-content>
+  </ion-card>
+  <ion-card id="card" text-center>
+    <ion-card-header id="header">
+      Faster
+    </ion-card-header>
+    <div class="hr"></div>
+    <ion-card-content>
+      With the new and improved electronic system your work hours can be recorded much faster and stored dynamically.
+      This results in highly improved operating times.<br><br>
+      <ion-icon id="home-icon" name="clock" text-center></ion-icon>
+    </ion-card-content>
+  </ion-card>
+  <ion-card id="card" text-center>
+    <ion-card-header id="header">
+      Fully Automated
+    </ion-card-header>
+    <div class="hr"></div>
+    <ion-card-content>
+      Thanks to the fully automated nature of the system this app allows for instant recording and
+      uploading of work hours without the hassle of hard-copies.<br><br>
+      <ion-icon id="home-icon" name="cog" text-center></ion-icon>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "demi-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,32 @@
+<ion-header> <!--header of page-->
+  <ion-navbar> <!--navbar to navigate to and from this page-->
+    <button ion-button menuToggle> <!--button to toggle side menu-->
+      <ion-icon name="menu" id="icon-menu"></ion-icon>
+    </button>
+    <ion-title id="title">
+      <ion-icon name="log-in"></ion-icon> Login
+      <button id="btnExit" (click)="exitApp()"> <!--button to call the exitApp() method-->
+        <ion-icon id="exit-icon" name="close-circle"></ion-icon>
+      </button>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="home"> <!--content on the page-->
+  <form (ngSubmit)="logForm(f)" #f="ngForm"> <!--form tag to create a form on oage-->
+    <ion-list id="main"> <!--strat of a list-->
+      <ion-item id="list"> <!--one item on the list, repeated-->
+        <ion-label id="label" stacked>NWU Number</ion-label> <!--label to name item on list-->
+        <ion-input id="input" type="text" ngModel name="nwunumber"></ion-input> <!--input tag to accept user input-->
+        <!--uses ngModel to allow form to send data to typescript side-->
+      </ion-item>
+      <ion-item id="list">
+        <ion-label id="label" stacked>Password</ion-label>
+        <ion-input id="input" type="password" ngModel name="password"></ion-input>
+      </ion-item>
+      <ion-item id="list">
+        <button id="btnLogin" ion-button type="submit" block>Login</button> <!--button of type submit to call the logForm() method in the form tag-->
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>

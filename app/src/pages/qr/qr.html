@@ -1,0 +1,19 @@
+<ion-header> <!--header of the page-->
+  <ion-navbar> <!--nav bar to navigate to and from this page-->
+    <button ion-button menuToggle> <!--button to open side menu-->
+      <ion-icon name="menu" id="icon-menu"></ion-icon>
+    </button>
+    <ion-title id="title">
+      <ion-icon name="stopwatch"></ion-icon> Hours
+      <button id="btnExit" (click)="exitApp()"><ion-icon id="exit-icon" name="close-circle"></ion-icon></button>
+      <!--button to call exitApp() method on typescript side-->
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content> <!--content of this page-->
+  <ion-tabs color="dark"> <!--creates tabs on current page, each tab a page itself-->
+    <ion-tab [root]="tab1Root" tabTitle="Demi"></ion-tab> <!--sets the root page for the tab-->
+    <ion-tab [root]="tab2Root" tabTitle="Lecturer"></ion-tab><!--will load this page if tab is selected-->
+  </ion-tabs>
+</ion-content>
